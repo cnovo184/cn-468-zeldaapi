@@ -1,0 +1,25 @@
+---
+// Import Layouts
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../layouts/SiteHeader.astro';
+
+// Import the component
+import GetData from '../components/GetData.astro';
+
+// Import Stylesheet
+import '../styles/global.css';
+---
+
+<BaseLayout>
+		
+	<!-- Header -->
+	<SiteHeader />
+	
+		<main >
+
+				<!-- Get Data Component -->
+				<GetData />			
+		  			
+		  </main>
+
+</BaseLayout>

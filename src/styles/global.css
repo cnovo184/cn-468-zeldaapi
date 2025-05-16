@@ -1,0 +1,62 @@
+/* Normalize CSS */
+
+/* Header */
+header h1 {
+    text-align: center;
+}
+
+/* Content */
+img {
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+  }
+    
+.cards {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+@media screen and (min-width: 30em) {
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+}
+
+
+.card {
+    display: grid;
+}
+
+.card img,
+.caption {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.caption {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+
+    /* Alignment */
+    /*     align-items: flex-end; */
+    /*     justify-content: flex-end; */
+}
+
+}
+
+@media screen and (min-width: 60em) {
+
+    .cards {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+}
