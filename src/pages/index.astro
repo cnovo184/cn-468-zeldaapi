@@ -1,25 +1,14 @@
 ---
-// Import Layouts
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../layouts/SiteHeader.astro';
-
-// Import the component
-import GetData from '../components/GetData.astro';
-
-// Import Stylesheet
+import ZeldaGames from '../components/ZeldaGames.astro';
 import '../styles/global.css';
 ---
 
 <BaseLayout>
-		
-	<!-- Header -->
-	<SiteHeader />
-	
-		<main >
-
-				<!-- Get Data Component -->
-				<GetData />			
-		  			
-		  </main>
-
+  <SiteHeader />
+  <main>
+    <h1>Welcome to the Zelda Games Database</h1>
+    <ZeldaGames />
+  </main>
 </BaseLayout>

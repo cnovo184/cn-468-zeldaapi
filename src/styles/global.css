@@ -60,3 +60,27 @@ CSS Grid layout for wider screens, when browser supports grid:
 }
 
 }
+
+#zelda-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    margin-top: 10px;
+}
