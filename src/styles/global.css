@@ -61,11 +61,28 @@ CSS Grid layout for wider screens, when browser supports grid:
 
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+
+:root{
+--medium-green: #56CE78;
+--light-green: #8EDFA5;
+--dark-green: #1DBE4B;
+--medium-brown: #B98353;
+--light-brown: #D0AC8C;
+--dark-brown: #A25919;
+--dark-yellow: #E0D253;
+--medium-yellow: #E8DD7E;
+--light-yellow: #EFE8A9;
+}
+
 #zelda-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    background-color: var(--medium-green);
 }
 
 figure {
@@ -76,11 +93,32 @@ figure {
     border: 1px solid #ddd;
     padding: 15px;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: var(--light-brown);
+    border: 4px solid var(--medium-yellow);
     text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+figure:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+figure:active {
+    background-color: var(--medium-yellow);
+}
+
+body{
+  font-family: 'Merriweather', serif;
 }
 
 figcaption {
+    font-family: 'Lora', serif;
     font-style: italic;
     margin-top: 10px;
+}
+
+h2{
+  font-family: 'Tagesschrift', sans-serif;
+  color: var(--dark-brown);
 }
